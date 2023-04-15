@@ -1,0 +1,44 @@
+Quick Questions
+
+1. Write two variable names that would be valid and well-named.
+student_name and student_age
+
+2. Write two variable names that would be valid but not well-named.
+name and x
+
+3. Write two variable names that would not be valid.
+Student Name and 2_student_ages
+
+4.What is the naming convention for variables in Python?
+The Naming Convention for variables in Python usually follows Pep 8. The name of the variables will usually be all
+lowercases with underscores between each words.
+
+5. What is a constant? Give an example of when you would use one.
+Constant is a variable and like its name suggests the value of said variable must remains constant and unchanging
+during the program execution. Constants are used to make the codes more readable and accessible and also make any
+future edits of the value easier, as you will only need to change
+the value of one variable instead of finding everywhere where said value is used.
+
+An example of using a constant is on Gross Domestic Product or gdp, since the value of it can change every year, and
+it is not common knowledge sonot everyone looking at the code will know what "2.7" or "4.1" represents.
+
+6. What is the naming convention for constants?
+Constants are usually all uppercase and like variables will have underscores between each words.
+
+
+Logic Exercise - Answer
+
+The fewest number of socks that you can take from the drawer and be completely sure that I will get a pair of same colour is 3.
+
+In the first attempt there is a 50% chance of getting either colour of socks.
+
+In the second attempt there is a 44.44% chance of getting the same colour as the first attempt, but there is also a
+55.56% chance of getting thedifferent colour.
+
+In the third attempt it is basically guranteed that I will get 1 pair of socks with same colour. If I got the same 2
+colours of socks in the firstbtwo attempts then the process is done. But If I got the different colour of socks in the
+first two attempts, no matter what I picked out in the third attempt there will be one pair of socks with same colours
+since there are only two colours of socks, white and black.
+
+This answer works no matter how many socks or there are a difference in the amount of socks between white and black
+colours as long as there are at least 3 socks and only 2 different colours of socks.

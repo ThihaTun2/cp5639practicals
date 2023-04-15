@@ -1,0 +1,99 @@
+Quick Questions
+
+
+1. "Control + /" for Windows and "Command + /" for Macs
+2. For Loop (Definite) and While Loop (Indefinite)
+3. Sentinel is a special values, that signifies when a loop ends. The loop ends when the conditions meets the Sentinel
+   value.
+4. It is not following the python naming convention of lowercases variables with underscores between each words.
+5. Augmented Assignment Operators are a combination of 2 assignments operators to make the arithematic calculations
+   between the objects more clear. For example "i += 1" is equal to "i = i + 1".
+
+
+Range
+
+
+# 1.
+for i in range(6):
+    print(i, end=' ')
+print()
+
+Answer: 0 1 2 3 4 5
+
+# 2.
+for i in range(33, 39):
+    print(i, end=' ')
+print()
+
+Answer: 33 34 35 36 37 38
+
+# 3.
+for i in range(17, 11, -1):
+    print(i, end=' ')
+print()
+
+Amswer: 17 16 15 14 13 12
+
+# 4.
+for i in range(1, 11):
+    print(i % 2, end=' ')
+print()
+
+Answer: 1 0 1 0 1 0 1 0 1 0
+
+# 5.
+for i in range(10, 0, -2):
+    print(i ** 2, end='>')
+print()
+
+Answer:100>64>36>16>4>
+
+
+Range Statements
+
+
+1. [0, 1, 2, 3, 4, 5]
+   for i in range(0, 7):
+
+2. [1, 5, 9, 13]
+   for i in range(1, 14, 3):
+
+3. [3, 2, 1]
+   for i in range(3, 0, -1):
+
+4. [7, 4, 1, -2, -5]
+   for i in range(7, -6, -3):
+
+
+Patterns
+
+
+1. Error-checking user input, looping until they enter a valid response
+   indefinite (while loop)
+
+2. A menu with several options including 'quit'
+   indefinite (while loop)
+
+3. Displaying all the months in a year
+   definite (for loop)
+
+4. Printing 5 random numbers
+   definite (for loop)
+
+5. Printing n random numbers, where n is a user input
+   definite (for loop)
+
+
+Logic Exercise
+
+
+Only ONE pull of marbles is needed.
+The label is swapped around meaning that the label is wrong.
+By pulling from the box that is labeled to have one black and one white marble, we can determine the contents of all
+three boxes. If the marble is white we can assume the other marble is while and if the marble is black we can assume the
+other marble is black.
+And if the box that is labelled black+white first marble is white and contains two white marbles, that the box that is
+labelled to contain two black marbles has to contain one black and one white marbles, as it cannot contains two black
+marbles since the labels are wrong and cannot contain two white marbles since the box that is labelled black and white
+ contains two white marbles.
+The opposite is true if the box that is labelled black+white first marble is black.

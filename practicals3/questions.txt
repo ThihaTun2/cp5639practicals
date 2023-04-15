@@ -1,0 +1,59 @@
+Quick Questions
+
+a = 2, b = 3, c = 4
+
+1. What is the "not equal to" operator in Python?
+The "not equal to" operator in Python is "!="
+
+2. What is the "less than or equal to" operator in Python?
+The "less than or equal to" operator in Python is "<="
+
+3. b + c * a > a ** b
+True
+"b + c * a" is 11 which is greater than "a ** b" value of 8.
+We can find it by simply finding using "bool(b + c * a > a ** b)", which gives out a "True".
+
+4. True or (c ** b - a % b > c ** c)
+True, since there is "or" and the first condition is True we can skip the entire condition and assume it to be True
+
+5. not True and False or True
+True
+Like the previous question there is "or" and one of the conditions is True so we can assume the entire equation is
+True.
+
+6. (a * b + c) % 2 == 0
+True
+"(a * b + c) % 2" gives out the value of exactly 0.
+We can find it by simply finding using "bool((a * b + c) % 2 == 0)", which gives out a "True".
+
+Patterns
+
+1. Deciding what coffee to make based on a customer's order (flat white, cappuccino, piccolo, long black, espresso...)
+if, elif, else
+
+2. Deciding whether to toast a customer's sandwich
+if, no else
+
+3. Recording what foods a customer is allergic to (ask for each allergen)
+if, if, if
+
+4. Calculating tax based on income - could be one of several tax brackets
+if, elif, else
+
+5. Handling the "play again?" question at the end of a computer game level
+if, else
+
+6. Determining if a frog is poisonous based on its colour
+if , else
+
+7. Determining if a frog is poisonous based on its colour, tongue length and number of eyes
+if, else
+
+Logic Exercise
+
+Alice is the oldest, Carl is the middle child and Bill is the youngest of the siblings.
+
+Carl cannot be the youngest, since either Alice or Bill is the youngest. And Alice cannot be the youngest since
+if Carl is not the youngest then Alice is the oldest sibling. This means that only Bill can be the youngest sibling
+since either he or Alice can be the youngest and Alice is the oldest sibling. This only leaves Carl to be the middle
+child.
