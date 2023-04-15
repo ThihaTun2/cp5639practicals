@@ -15,7 +15,7 @@ while user_pick != "quit":
         user_pick = input(MENU).lower()
 
     if user_pick == computer_pick:
-        result == "It's a DRAW"
+        result = "It's a DRAW"
     elif user_pick == "paper":
         if computer_pick == "rock":
             result = "YOU"

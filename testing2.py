@@ -19,20 +19,14 @@ while pass_type != "wd" and pass_type != "wk":
 age = today.year - birthday.year - ((today.month, today.day) < (birthday.month, birthday.day))
 
 if age < 5:
-    if pass_type == "wd":
-        ticket_price = 30
-    else:
-        ticket_price = 40
+    ticket_price = 30
 elif age <= 50:
-    if pass_type == "wd":
-        ticket_price = 50
-    else:
-        ticket_price = 60
+    ticket_price = 50
 else:
-    if pass_type == "wd":
-        ticket_price = 45
-    else:
-        ticket_price = 55
+    ticket_price =45
+
+if pass_type == "wk":
+    ticket_price += 10
 
 upgrade = input("Upgrade the ticket? Yes/NO ").lower()
 while upgrade != "yes" and upgrade != "no":
