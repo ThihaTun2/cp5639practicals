@@ -1,41 +1,53 @@
-# Decision Structures
-#
-# 2. Time of day
-#
-# PseudoCode
-# get time_of_day
-# while time_of_day greater than 23 and less than 0
-#     get time_of_day
-# if time_of_day less than 12
-#     time_message = before
-# else
-#     time_message = after
-# get user_status
-# while user_status is not coming or going
-#     get user_status
-# if user_status = coming
-#     status_message = Hi!
-# else
-#     status_message = Bye!
-# print time_message, user_status, status_message
+import datetime
+import random
 
-time_of_day = int(input("Enter the current hour of the day (Between 0-23 hours) :"))
-while time_of_day > 23 or time_of_day < 0:
-    print("Your time is invalid please try again.")
-    time_of_day = int(input("Enter the current hour of the day (Between 0-23 hours) :"))
+print("*******************************")
+print("Universal Ride Ticketing System")
+print("*******************************")
 
-if time_of_day < 12:
-    time_message = "before"
+today = datetime.datetime.today()
+ticket_price = 0
+birthday_string = input("Enter birthday Eg: 1999/05/15 : ")
+birthday = datetime.datetime.strptime(birthday_string, '%Y/%m/%d')
+gift_selection = ["smartphone", "watch", "bicycle", "car", "movie ticket"]
+
+pass_type = input("Enter WD or WK: ").lower()
+while pass_type != "wd" and pass_type != "wk":
+    print("Invalid input!")
+    pass_type = input("Enter WD or WK: ").lower()
+
+age = today.year - birthday.year - ((today.month, today.day) < (birthday.month, birthday.day))
+
+if age < 5:
+    if pass_type == "wd":
+        ticket_price = 30
+    else:
+        ticket_price = 40
+elif age <= 50:
+    if pass_type == "wd":
+        ticket_price = 50
+    else:
+        ticket_price = 60
 else:
-    time_message = "after"
+    if pass_type == "wd":
+        ticket_price = 45
+    else:
+        ticket_price = 55
 
-user_status = input("Are you coming or going? (Answer with 'coming' or 'going' only): ").lower()
-while user_status != "coming" and user_status != "going":
-    print("Your input is invalid please try again.")
-    print(user_status)
-    user_status = input("Are you coming or going? (Answer with 'coming' or 'going' only): ").lower()
+upgrade = input("Upgrade the ticket? Yes/NO ").lower()
+while upgrade != "yes" and upgrade != "no":
+    print("Invalid input!")
+    upgrade = input("Upgrade the ticket? Yes/NO ").lower()
 
-if user_status == "coming":
-    status_message = "Hi!"
-else:
-    status_message = "Bye!"
+if today.month == birthday.month:
+    birthday_gift = random.choice(gift_selection)
+    print(f"Happy Birthday!! You won a {birthday_gift} as a birthday present.")
+
+if upgrade == "yes":
+    if pass_type == "wd":
+        ticket_price += 20
+    else:
+        ticket_price += 30
+
+print(f"Today is {today.strftime('%Y-%m-%d')}")
+print(f"The cost of your ticket is {ticket_price}")
